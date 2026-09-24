@@ -6,8 +6,7 @@
 <title>João Gabriel Medeiros Caldas — Software Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
-  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#10202A;
@@ -95,13 +94,18 @@
     border-radius:4px;
     padding:20px 22px;
   }
+  .project-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;}
   .project h3{
     font-family:'JetBrains Mono',monospace;
     font-size:1rem;
     font-weight:500;
-    margin-bottom:8px;
   }
-  .project p{font-size:0.95rem;color:var(--slate);}
+  .project .tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.75rem;
+    color:var(--slate);
+  }
+  .project p{font-size:0.95rem;color:var(--slate);margin-top:8px;}
   .project a{color:var(--amber);text-decoration:none;font-size:0.85rem;display:inline-block;margin-top:10px;}
   footer{padding:56px 0 80px;border-top:1px solid var(--line);}
   footer p{color:var(--slate);font-size:0.9rem;}
@@ -118,10 +122,10 @@
   <header class="hero">
     <div class="prompt">~/joao-gabriel</div>
     <h1>João Gabriel Medeiros Caldas</h1>
-    <p class="role">Full-Stack Software Developer construindo plataformas web escaláveis com TypeScript, React, Node.js,
-      NestJS e Java — com uma mentalidade criativa e de dono do produto.</p>
+    <p class="role">Full-Stack Software Developer construindo plataformas web escaláveis com TypeScript, React, Node.js, NestJS e Java, com uma mentalidade criativa e de dono do produto.</p>
     <div class="links">
-      <a href="mailto:jgcaldas19@gmail.com">jgcaldas19@gmail.com</a>
+      <a href="mailto:jgmc@cin.ufpe.br">jgmc@cin.ufpe.br</a>
+      <a href="tel:+5581994813230">+55 81 99481-3230</a>
       <a href="https://www.linkedin.com/in/joão-gabriel-medeiros-caldas" target="_blank">LinkedIn</a>
       <a href="https://github.com/Jgmc2025" target="_blank">GitHub</a>
     </div>
@@ -129,9 +133,7 @@
 
   <section id="sobre">
     <h2>sobre</h2>
-    <p>Desenvolvedor de software apaixonado por criar novas ideias e simplificar a vida das pessoas por meio da tecnologia.
-      Cursando Sistemas de Informação no Centro de Informática da UFPE, onde também atuo como monitor de Introdução à Programação,
-      ajudando estudantes a desenvolver raciocínio lógico e habilidades de resolução de problemas com Python.</p>
+    <p>Desenvolvedor de software apaixonado por criar novas ideias e simplificar a vida das pessoas por meio da tecnologia. Cursando Sistemas de Informação no Centro de Informática da UFPE, onde também atuo como monitor de Introdução à Programação, ajudando estudantes a desenvolver raciocínio lógico e habilidades de resolução de problemas com Python.</p>
     <div class="stack">
       <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>React</span>
       <span>Node.js</span><span>NestJS</span><span>Java</span><span>Docker</span>
@@ -152,15 +154,21 @@
         <li>Versionamento de código com Git e gestão de projetos no GitLab.</li>
       </ul>
     </div>
+  </section>
+
+  <section id="conquistas">
+    <h2>conquistas</h2>
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">Programming Assistant — Centro de Informática UFPE</span>
-        <span class="entry-meta">09/2025 – 07/2026</span>
+        <span class="entry-title">API Efficiency Boost</span>
       </div>
-      <ul>
-        <li>Mentoria de mais de 50 estudantes em Introdução à Programação com Python.</li>
-        <li>Sessões de apoio individual e em grupo para desenvolver raciocínio lógico e resolução de problemas.</li>
-      </ul>
+      <p>Aumento da eficiência de APIs por meio de técnicas de otimização e refatoração de código.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Programming Mentorship Impact</span>
+      </div>
+      <p>Auxiliei mais de 50 estudantes a aprimorarem habilidades de programação e resolução de problemas com Python.</p>
     </div>
   </section>
 
@@ -168,19 +176,32 @@
     <h2>projetos</h2>
     <div class="projects">
       <div class="project">
-        <h3>Creatorsfy</h3>
+        <div class="project-head"><h3>Creatorsfy</h3><span class="tag">NestJS · TypeScript</span></div>
         <p>Plataforma que conecta marcas a influenciadores para escalar o marketing de produtos. Arquitetura de APIs com NestJS e TypeScript.</p>
-        <a href="#" target="_blank">ver repositório →</a>
       </div>
       <div class="project">
-        <h3>[nome do projeto]</h3>
-        <p>Descrição curta do problema que o projeto resolve e das tecnologias usadas.</p>
-        <a href="#" target="_blank">ver repositório →</a>
+        <div class="project-head"><h3>hub</h3><span class="tag">JavaScript · IA</span></div>
+        <p>Hub inteligente de recursos educacionais, fullstack (FastAPI + React) com integração da API do Gemini para categorização automática de materiais didáticos.</p>
+        <a href="https://github.com/Jgmc2025/hub" target="_blank">ver repositório →</a>
       </div>
       <div class="project">
-        <h3>[nome do projeto]</h3>
-        <p>Descrição curta do problema que o projeto resolve e das tecnologias usadas.</p>
-        <a href="#" target="_blank">ver repositório →</a>
+        <div class="project-head"><h3>retail4best</h3><span class="tag">TypeScript · Privado</span></div>
+        <p>Plataforma SaaS voltada para o setor de varejo.</p>
+      </div>
+      <div class="project">
+        <div class="project-head"><h3>avanade</h3><span class="tag">Angular · ASP.NET Core</span></div>
+        <p>Aplicação web para cadastro e gerenciamento de tarefas, com Angular no front-end, ASP.NET Core Web API no back-end e SQL Server como banco de dados.</p>
+        <a href="https://github.com/Jgmc2025/avanade" target="_blank">ver repositório →</a>
+      </div>
+      <div class="project">
+        <div class="project-head"><h3>newflix</h3><span class="tag">HTML5 · CSS3 · JavaScript</span></div>
+        <p>Projeto web inspirado na Netflix, construído com HTML5, CSS3 e JavaScript.</p>
+        <a href="https://github.com/Jgmc2025/newflix" target="_blank">ver repositório →</a>
+      </div>
+      <div class="project">
+        <div class="project-head"><h3>java1</h3><span class="tag">Java</span></div>
+        <p>API de testes de operações bancárias, desenvolvida em Java.</p>
+        <a href="https://github.com/Jgmc2025/java1" target="_blank">ver repositório →</a>
       </div>
     </div>
   </section>
@@ -200,16 +221,28 @@
       </div>
     </div>
     <div class="stack">
-      <span>Inter Frontend Developer</span><span>Oracle Java Foundations</span>
-      <span>API RESTful com SpringBoot</span><span>Generative AI (Google)</span>
-      <span>Generative AI (Databricks)</span><span>Python for Data Science (IBM)</span>
+      <span>Inter Frontend Developer (99h)</span>
+      <span>Oracle Java Foundations</span>
+      <span>API RESTful com SpringBoot (Udemy, 6h)</span>
+      <span>Programação em Java do Básico ao Avançado (Udemy, 35h)</span>
+      <span>Conhecimentos Bancários — Banco do Brasil (Estratégia Concursos, 63h)</span>
+      <span>Generative AI (Google)</span>
+      <span>Generative AI (Databricks)</span>
+      <span>Python for Data Science (IBM)</span>
+    </div>
+  </section>
+
+  <section id="idiomas">
+    <h2>idiomas</h2>
+    <div class="stack">
+      <span>Inglês — Avançado</span>
+      <span>Português — Nativo</span>
     </div>
   </section>
 
   <footer>
-    <p>jgcaldas19@gmail.com · Recife, PE, Brasil</p>
-    <p><a href="https://www.linkedin.com/in/joão-gabriel-medeiros-caldas" target="_blank">LinkedIn</a> · <a href="https://github.com/Jgmc2025"
-                                                                                                          target="_blank">GitHub</a></p>
+    <p>jgmc@cin.ufpe.br · +55 81 99481-3230 · Recife, PE, Brasil</p>
+    <p><a href="https://www.linkedin.com/in/joão-gabriel-medeiros-caldas" target="_blank">LinkedIn</a> · <a href="https://github.com/Jgmc2025" target="_blank">GitHub</a></p>
   </footer>
 </div>
 
