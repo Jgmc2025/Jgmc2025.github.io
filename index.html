@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>João Gabriel Medeiros Caldas — Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10202A;
+    --ink-2:#16303D;
+    --paper:#F2EFE9;
+    --amber:#E8A33D;
+    --slate:#7C8B93;
+    --line:rgba(242,239,233,0.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+  header.hero{padding:96px 0 64px;}
+  .prompt{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--amber);
+    font-size:0.95rem;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:'JetBrains Mono',monospace;
+    font-weight:700;
+    font-size:clamp(2rem,6vw,3.1rem);
+    line-height:1.15;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    font-size:1.15rem;
+    color:var(--slate);
+    margin-top:14px;
+    max-width:52ch;
+  }
+  .links{margin-top:28px;display:flex;gap:20px;flex-wrap:wrap;}
+  .links a{
+    color:var(--paper);
+    text-decoration:none;
+    border-bottom:1px solid var(--amber);
+    padding-bottom:2px;
+    font-size:0.95rem;
+  }
+  .links a:hover{color:var(--amber);}
+  section{padding:48px 0;border-top:1px solid var(--line);}
+  h2{
+    font-family:'JetBrains Mono',monospace;
+    font-size:1rem;
+    color:var(--amber);
+    font-weight:500;
+    margin-bottom:24px;
+  }
+  p{max-width:66ch;color:#DCE2E5;}
+  .stack{
+    display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;
+  }
+  .stack span{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.82rem;
+    border:1px solid var(--line);
+    padding:5px 10px;
+    border-radius:3px;
+    color:var(--paper);
+  }
+  .entry{margin-bottom:32px;}
+  .entry:last-child{margin-bottom:0;}
+  .entry-head{
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;
+    margin-bottom:6px;
+  }
+  .entry-title{font-weight:600;font-size:1.02rem;}
+  .entry-meta{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.82rem;
+    color:var(--slate);
+  }
+  .entry ul{margin-top:8px;padding-left:18px;color:#DCE2E5;}
+  .entry li{margin-bottom:6px;}
+  .projects{display:flex;flex-direction:column;gap:20px;}
+  .project{
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:20px 22px;
+  }
+  .project h3{
+    font-family:'JetBrains Mono',monospace;
+    font-size:1rem;
+    font-weight:500;
+    margin-bottom:8px;
+  }
+  .project p{font-size:0.95rem;color:var(--slate);}
+  .project a{color:var(--amber);text-decoration:none;font-size:0.85rem;display:inline-block;margin-top:10px;}
+  footer{padding:56px 0 80px;border-top:1px solid var(--line);}
+  footer p{color:var(--slate);font-size:0.9rem;}
+  footer a{color:var(--paper);}
+  @media (prefers-reduced-motion: no-preference){
+    header.hero{animation:fade 0.6s ease-out;}
+  }
+  @keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="prompt">~/joao-gabriel</div>
+    <h1>João Gabriel Medeiros Caldas</h1>
+    <p class="role">Full-Stack Software Developer construindo plataformas web escaláveis com TypeScript, React, Node.js, NestJS e Java — com uma mentalidade criativa e de dono do produto.</p>
+    <div class="links">
+      <a href="mailto:jgcaldas19@gmail.com">jgcaldas19@gmail.com</a>
+      <a href="https://www.linkedin.com/in/joão-gabrielmedeiros-caldas" target="_blank">LinkedIn</a>
+      <a href="https://github.com/seu-usuario" target="_blank">GitHub</a>
+    </div>
+  </header>
+
+  <section id="sobre">
+    <h2>sobre</h2>
+    <p>Desenvolvedor de software apaixonado por criar novas ideias e simplificar a vida das pessoas por meio da tecnologia. Cursando Sistemas de Informação no Centro de Informática da UFPE, onde também atuo como monitor de Introdução à Programação, ajudando estudantes a desenvolver raciocínio lógico e habilidades de resolução de problemas com Python.</p>
+    <div class="stack">
+      <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>React</span>
+      <span>Node.js</span><span>NestJS</span><span>Java</span><span>Docker</span>
+      <span>Git</span><span>GitLab</span><span>HTML5</span><span>CSS3</span>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <h2>experiência</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Full Stack Engineer — Berzerk Club (Creatorsfy)</span>
+        <span class="entry-meta">12/2025 – 07/2026</span>
+      </div>
+      <ul>
+        <li>Arquitetura de APIs e integração entre back-end e front-end com NestJS, TypeScript e containerização com Docker.</li>
+        <li>Metodologia ágil SCRUM, participando de sprints, plannings e reviews.</li>
+        <li>Versionamento de código com Git e gestão de projetos no GitLab.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Programming Assistant — Centro de Informática UFPE</span>
+        <span class="entry-meta">09/2025 – 07/2026</span>
+      </div>
+      <ul>
+        <li>Mentoria de mais de 50 estudantes em Introdução à Programação com Python.</li>
+        <li>Sessões de apoio individual e em grupo para desenvolver raciocínio lógico e resolução de problemas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2>projetos</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Creatorsfy</h3>
+        <p>Plataforma que conecta marcas a influenciadores para escalar o marketing de produtos. Arquitetura de APIs com NestJS e TypeScript.</p>
+        <a href="#" target="_blank">ver repositório →</a>
+      </div>
+      <div class="project">
+        <h3>[nome do projeto]</h3>
+        <p>Descrição curta do problema que o projeto resolve e das tecnologias usadas.</p>
+        <a href="#" target="_blank">ver repositório →</a>
+      </div>
+      <div class="project">
+        <h3>[nome do projeto]</h3>
+        <p>Descrição curta do problema que o projeto resolve e das tecnologias usadas.</p>
+        <a href="#" target="_blank">ver repositório →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="formacao">
+    <h2>formação &amp; certificados</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">B.S. in Information Systems — UFPE</span>
+        <span class="entry-meta">05/2025 – presente</span>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">B.S. in Telecommunications Engineering — UFPE</span>
+        <span class="entry-meta">04/2023 – 04/2024</span>
+      </div>
+    </div>
+    <div class="stack">
+      <span>Inter Frontend Developer</span><span>Oracle Java Foundations</span>
+      <span>API RESTful com SpringBoot</span><span>Generative AI (Google)</span>
+      <span>Generative AI (Databricks)</span><span>Python for Data Science (IBM)</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>jgcaldas19@gmail.com · Recife, PE, Brasil</p>
+    <p><a href="https://www.linkedin.com/in/joão-gabrielmedeiros-caldas" target="_blank">LinkedIn</a> · <a href="https://github.com/seu-usuario" target="_blank">GitHub</a></p>
+  </footer>
+</div>
+
+</body>
+</html>
