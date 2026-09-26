@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>João Gabriel Medeiros Caldas — Software Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +15,12 @@
     --amber:#E8A33D;
     --slate:#7C8B93;
     --line:rgba(242,239,233,0.14);
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);}
   body{
     background:var(--ink);
     color:var(--paper);
@@ -62,6 +65,7 @@
     font-weight:500;
     margin-bottom:24px;
   }
+  h2 .count{color:var(--slate);font-weight:400;}
   p{max-width:66ch;color:#DCE2E5;}
   .stack{
     display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;
@@ -107,6 +111,51 @@
   }
   .project p{font-size:0.95rem;color:var(--slate);margin-top:8px;}
   .project a{color:var(--amber);text-decoration:none;font-size:0.85rem;display:inline-block;margin-top:10px;}
+
+  /* Todos os repositórios: grade compacta */
+  .repo-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:14px;
+  }
+  .repo-card{
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:16px 18px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    min-width:0;
+  }
+  .repo-card-head{
+    display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+  }
+  .repo-card h3{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.92rem;
+    font-weight:500;
+    overflow-wrap:anywhere;
+  }
+  .repo-card h3 a{color:var(--paper);text-decoration:none;}
+  .repo-card h3 a:hover{color:var(--amber);}
+  .repo-card .lang{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.72rem;
+    color:var(--amber);
+    white-space:nowrap;
+  }
+  .repo-card p{font-size:0.85rem;color:var(--slate);margin:0;max-width:none;}
+  .repo-card .fork-tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.7rem;
+    color:var(--slate);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:2px 6px;
+    display:inline-block;
+    width:fit-content;
+  }
+
   footer{padding:56px 0 80px;border-top:1px solid var(--line);}
   footer p{color:var(--slate);font-size:0.9rem;}
   footer a{color:var(--paper);}
@@ -172,36 +221,54 @@
     </div>
   </section>
 
-  <section id="projetos">
-    <h2>projetos</h2>
-    <div class="projects">
-      <div class="project">
-        <div class="project-head"><h3>Creatorsfy</h3><span class="tag">NestJS · TypeScript</span></div>
-        <p>Plataforma que conecta marcas a influenciadores para escalar o marketing de produtos. Arquitetura de APIs com NestJS e TypeScript.</p>
+  <section id="todos-repositorios">
+    <h2>todos os repositórios públicos <span class="count">(16)</span></h2>
+    <div class="repo-grid">
+      <div class="repo-card">
+        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/miniguia-ia-generativa-notebooklm" target="_blank">miniguia-ia-generativa-notebooklm</a></h3><span class="lang">Python</span></div>
+        <p>Miniguia de estudos sobre IA Generativa criado com NotebookLM: curadoria de fontes, prompts testados e dados reais aplicados a um projeto Python (Bootcamp Accenture).</p>
       </div>
-      <div class="project">
-        <div class="project-head"><h3>hub</h3><span class="tag">JavaScript · IA</span></div>
-        <p>Hub inteligente de recursos educacionais, fullstack (FastAPI + React) com integração da API do Gemini para categorização automática de materiais didáticos.</p>
-        <a href="https://github.com/Jgmc2025/hub" target="_blank">ver repositório →</a>
+      <div class="repo-card">
+        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/api-dioshopping" target="_blank">api-dioshopping</a></h3><span class="lang">TypeScript</span></div>
+        <p>Backend criado durante o Labs na DIO com Node e TypeScript.</p>
+        <span class="fork-tag">fork</span>
       </div>
-      <div class="project">
-        <div class="project-head"><h3>retail4best</h3><span class="tag">TypeScript · Privado</span></div>
-        <p>Plataforma SaaS voltada para o setor de varejo.</p>
+      <div class="repo-card">
+        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/dioshopping" target="_blank">dioshopping</a></h3><span class="lang">JavaScript</span></div>
+        <p>E-commerce desenvolvido na live da DIO.</p>
+        <span class="fork-tag">fork</span>
       </div>
-      <div class="project">
-        <div class="project-head"><h3>avanade</h3><span class="tag">Angular · ASP.NET Core</span></div>
-        <p>Aplicação web para cadastro e gerenciamento de tarefas, com Angular no front-end, ASP.NET Core Web API no back-end e SQL Server como banco de dados.</p>
-        <a href="https://github.com/Jgmc2025/avanade" target="_blank">ver repositório →</a>
+      <div class="repo-card">
+        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/newflix" target="_blank">newflix</a></h3><span class="lang">HTML</span></div>
+        <p>Projeto web inspirado na Netflix com HTML5, CSS3 e JavaScript.</p>
       </div>
-      <div class="project">
-        <div class="project-head"><h3>newflix</h3><span class="tag">HTML5 · CSS3 · JavaScript</span></div>
-        <p>Projeto web inspirado na Netflix, construído com HTML5, CSS3 e JavaScript.</p>
-        <a href="https://github.com/Jgmc2025/newflix" target="_blank">ver repositório →</a>
+      <div class="repo-card">
+        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/banco" target="_blank">banco</a></h3></div>
+        <p>Teste de transferência e empréstimo bancário.</p>
       </div>
-      <div class="project">
-        <div class="project-head"><h3>java1</h3><span class="tag">Java</span></div>
-        <p>API de testes de operações bancárias, desenvolvida em Java.</p>
-        <a href="https://github.com/Jgmc2025/java1" target="_blank">ver repositório →</a>
+      <div class="repo-card">
+        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/java1" target="_blank">java1</a></h3><span class="lang">Java</span></div>
+        <p>Teste de API de banco.</p>
+      </div>
+      <div class="repo-card">
+        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/avanade" target="_blank">avanade</a></h3><span class="lang">HTML</span></div>
+        <p>Cadastro e gerenciamento de tarefas com Angular, ASP.NET Core Web API e SQL Server.</p>
+      </div>
+      <div class="repo-card">
+        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/hub" target="_blank">hub</a></h3><span class="lang">JavaScript</span></div>
+        <p>Hub inteligente de recursos educacionais (FastAPI + React) com integração da API do Gemini.</p>
+      </div>
+      <div class="repo-card">
+        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/vlab" target="_blank">vlab</a></h3><span class="lang">Python</span></div>
+        <p>Projeto em Python.</p>
+      </div>
+      <div class="repo-card">
+        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/teste-nestjs" target="_blank">teste-nestjs</a></h3><span class="lang">TypeScript</span></div>
+        <p>Testes com NestJS e TypeScript.</p>
+      </div>
+      <div class="repo-card">
+        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/Projeto_de_IP" target="_blank">Projeto_de_IP</a></h3><span class="lang">Python</span></div>
+        <p>Trabalho de Introdução à Programação.</p>
       </div>
     </div>
   </section>
