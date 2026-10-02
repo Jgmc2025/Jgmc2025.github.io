@@ -65,8 +65,8 @@
     font-weight:500;
     margin-bottom:24px;
   }
-  h2 .count{color:var(--slate);font-weight:400;}
   p{max-width:66ch;color:#DCE2E5;}
+  p + p{margin-top:14px;}
   .stack{
     display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;
   }
@@ -77,6 +77,12 @@
     padding:5px 10px;
     border-radius:3px;
     color:var(--paper);
+  }
+  .sub{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.8rem;
+    color:var(--slate);
+    margin:26px 0 4px;
   }
   .entry{margin-bottom:32px;}
   .entry:last-child{margin-bottom:0;}
@@ -92,27 +98,7 @@
   }
   .entry ul{margin-top:8px;padding-left:18px;color:#DCE2E5;}
   .entry li{margin-bottom:6px;}
-  .projects{display:flex;flex-direction:column;gap:20px;}
-  .project{
-    border:1px solid var(--line);
-    border-radius:4px;
-    padding:20px 22px;
-  }
-  .project-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;}
-  .project h3{
-    font-family:'JetBrains Mono',monospace;
-    font-size:1rem;
-    font-weight:500;
-  }
-  .project .tag{
-    font-family:'JetBrains Mono',monospace;
-    font-size:0.75rem;
-    color:var(--slate);
-  }
-  .project p{font-size:0.95rem;color:var(--slate);margin-top:8px;}
-  .project a{color:var(--amber);text-decoration:none;font-size:0.85rem;display:inline-block;margin-top:10px;}
 
-  /* Todos os repositórios: grade compacta */
   .repo-grid{
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
@@ -171,7 +157,7 @@
   <header class="hero">
     <div class="prompt">~/joao-gabriel</div>
     <h1>João Gabriel Medeiros Caldas</h1>
-    <p class="role">Full-Stack Software Developer construindo plataformas web escaláveis com TypeScript, React, Node.js, NestJS e Java, com uma mentalidade criativa e de dono do produto.</p>
+    <p class="role">Full-Stack Software Developer construindo plataformas web escaláveis com Python, JavaScript, TypeScript, React, Node.js, NestJS e Java, com integrações de IA e uma mentalidade criativa e de dono do produto.</p>
     <div class="links">
       <a href="mailto:jgmc@cin.ufpe.br">jgmc@cin.ufpe.br</a>
       <a href="tel:+5581994813230">+55 81 99481-3230</a>
@@ -182,11 +168,25 @@
 
   <section id="sobre">
     <h2>sobre</h2>
-    <p>Desenvolvedor de software apaixonado por criar novas ideias e simplificar a vida das pessoas por meio da tecnologia. Cursando Sistemas de Informação no Centro de Informática da UFPE, onde também atuo como monitor de Introdução à Programação, ajudando estudantes a desenvolver raciocínio lógico e habilidades de resolução de problemas com Python.</p>
+    <p>Desenvolvedor de software apaixonado por criar novas ideias e simplificar a vida das pessoas por meio da tecnologia. Tenho experiência prática na construção de plataformas web escaláveis, com foco em arquitetura de software adaptável, design de APIs e deploy baseado em Docker, além de integrações com IA.</p>
+    <p>Curso Sistemas de Informação no Centro de Informática da UFPE, onde fui monitor de Introdução à Programação. Concluí o bootcamp de Desenvolvimento Front-End do Inter, com mais de 30 certificados ao longo do curso. Encaro cada desafio como se estivesse gerindo o negócio, sempre em busca de novas ideias.</p>
+
+    <div class="sub">// linguagens</div>
     <div class="stack">
-      <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>React</span>
-      <span>Node.js</span><span>NestJS</span><span>Java</span><span>Docker</span>
+      <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Java</span>
+    </div>
+    <div class="sub">// tecnologias &amp; ferramentas</div>
+    <div class="stack">
+      <span>React</span><span>Node.js</span><span>NestJS</span><span>Docker</span>
       <span>Git</span><span>GitLab</span><span>HTML5</span><span>CSS3</span>
+    </div>
+    <div class="sub">// competências</div>
+    <div class="stack">
+      <span>Desenvolvimento Full-Stack</span>
+      <span>Arquitetura e Design de APIs</span>
+      <span>SCRUM (Sprints, Plannings e Reviews)</span>
+      <span>Integração com IA</span>
+      <span>Criatividade e dedicação na resolução de problemas</span>
     </div>
   </section>
 
@@ -195,12 +195,24 @@
     <div class="entry">
       <div class="entry-head">
         <span class="entry-title">Full Stack Engineer — Berzerk Club (Creatorsfy)</span>
-        <span class="entry-meta">12/2025 – 07/2026</span>
+        <span class="entry-meta">12/2025 – 07/2026 · Recife, PE</span>
       </div>
       <ul>
-        <li>Arquitetura de APIs e integração entre back-end e front-end com NestJS, TypeScript e containerização com Docker.</li>
-        <li>Metodologia ágil SCRUM, participando de sprints, plannings e reviews.</li>
-        <li>Versionamento de código com Git e gestão de projetos no GitLab.</li>
+        <li>Desenvolvimento full-stack na Creatorsfy, projeto da Berzerk Club que conecta marcas a influenciadores para escalar o marketing de produtos, simplificando a gestão e a contratação de campanhas.</li>
+        <li>Arquitetura de APIs e integração entre back-end e front-end, convertendo requisitos de stakeholders em sistemas escaláveis.</li>
+        <li>Uso de NestJS e TypeScript para garantir comunicação segura entre back-end e front-end, com containerização em Docker.</li>
+        <li>Metodologia ágil SCRUM, participando de sprints, sprint plannings e sprint reviews.</li>
+        <li>Versionamento de código com Git e armazenamento e gestão dos projetos no GitLab.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Programming Assistant (Monitor de Introdução à Programação) — Centro de Informática, UFPE</span>
+        <span class="entry-meta">09/2025 – 07/2026 · Recife, PE</span>
+      </div>
+      <ul>
+        <li>Mentoria de mais de 50 estudantes no desenvolvimento de raciocínio lógico e na resolução de problemas com Python.</li>
+        <li>Sessões de apoio individuais e em grupo que tornaram conceitos fundamentais mais acessíveis.</li>
       </ul>
     </div>
   </section>
@@ -277,8 +289,8 @@
     <h2>formação &amp; certificados</h2>
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">B.S. in Information Systems — UFPE</span>
-        <span class="entry-meta">05/2025 – presente</span>
+        <span class="entry-title">B.S. in Information Systems — Centro de Informática, UFPE</span>
+        <span class="entry-meta">05/2025 – 12/2028 (previsão)</span>
       </div>
     </div>
     <div class="entry">
@@ -288,14 +300,15 @@
       </div>
     </div>
     <div class="stack">
-      <span>Inter Frontend Developer (99h)</span>
-      <span>Oracle Java Foundations</span>
+      <span>Inter Frontend Developer — Banco Inter (bootcamp, 99h)</span>
+      <span>Oracle Java Foundations: Training and Assessment — Oracle</span>
       <span>API RESTful com SpringBoot (Udemy, 6h)</span>
       <span>Programação em Java do Básico ao Avançado (Udemy, 35h)</span>
       <span>Conhecimentos Bancários — Banco do Brasil (Estratégia Concursos, 63h)</span>
-      <span>Generative AI (Google)</span>
-      <span>Generative AI (Databricks)</span>
-      <span>Python for Data Science (IBM)</span>
+      <span>Generative AI — Google</span>
+      <span>Generative AI — Databricks</span>
+      <span>Python for Data Science — IBM</span>
+      <span>CI&amp;T — Java AI Copilot</span>
     </div>
   </section>
 
