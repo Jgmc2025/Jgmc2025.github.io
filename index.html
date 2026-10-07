@@ -6,372 +6,199 @@
 <title>João Gabriel Medeiros Caldas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#10202A;
-    --ink-2:#16303D;
-    --paper:#F2EFE9;
-    --amber:#E8A33D;
-    --slate:#7C8B93;
-    --line:rgba(242,239,233,0.14);
-    box-sizing:border-box;
-    padding-top:env(safe-area-inset-top,0px);
-    padding-bottom:env(safe-area-inset-bottom,0px);
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);}
-  body{
-    background:var(--ink);
-    color:var(--paper);
-    font-family:'Inter',sans-serif;
-    line-height:1.6;
-  }
-  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
-  header.hero{padding:96px 0 64px;}
-  .prompt{
-    font-family:'JetBrains Mono',monospace;
-    color:var(--amber);
-    font-size:0.95rem;
-    margin-bottom:18px;
-  }
-  h1{
-    font-family:'JetBrains Mono',monospace;
-    font-weight:700;
-    font-size:clamp(2rem,6vw,3.1rem);
-    line-height:1.15;
-    letter-spacing:-0.01em;
-  }
-  .role{
-    font-size:1.15rem;
-    color:var(--slate);
-    margin-top:14px;
-    max-width:52ch;
-  }
-  .links{margin-top:28px;display:flex;gap:20px;flex-wrap:wrap;}
-  .links a{
-    color:var(--paper);
-    text-decoration:none;
-    border-bottom:1px solid var(--amber);
-    padding-bottom:2px;
-    font-size:0.95rem;
-  }
-  .links a:hover{color:var(--amber);}
-  section{padding:48px 0;border-top:1px solid var(--line);}
-  h2{
-    font-family:'JetBrains Mono',monospace;
-    font-size:1rem;
-    color:var(--amber);
-    font-weight:500;
-    margin-bottom:24px;
-  }
-  p{max-width:66ch;color:#DCE2E5;}
-  p + p{margin-top:14px;}
-  .stack{
-    display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;
-  }
-  .stack span{
-    font-family:'JetBrains Mono',monospace;
-    font-size:0.82rem;
-    border:1px solid var(--line);
-    padding:5px 10px;
-    border-radius:3px;
-    color:var(--paper);
-  }
-  .stack a{
-    font-family:'JetBrains Mono',monospace;
-    font-size:0.82rem;
-    border:1px solid var(--line);
-    padding:5px 10px;
-    border-radius:3px;
-    color:var(--paper);
-    text-decoration:none;
-  }
-  .stack a:hover{border-color:var(--amber);color:var(--amber);}
-  .sub{
-    font-family:'JetBrains Mono',monospace;
-    font-size:0.8rem;
-    color:var(--slate);
-    margin:26px 0 4px;
-  }
-  .entry{margin-bottom:32px;}
-  .entry:last-child{margin-bottom:0;}
-  .entry-head{
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;
-    margin-bottom:6px;
-  }
-  .entry-title{font-weight:600;font-size:1.02rem;}
-  .entry-meta{
-    font-family:'JetBrains Mono',monospace;
-    font-size:0.82rem;
-    color:var(--slate);
-  }
-  .entry ul{margin-top:8px;padding-left:18px;color:#DCE2E5;}
-  .entry li{margin-bottom:6px;}
-
-  .repo-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-    gap:14px;
-  }
-  .repo-card{
-    border:1px solid var(--line);
-    border-radius:4px;
-    padding:16px 18px;
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    min-width:0;
-  }
-  .repo-card-head{
-    display:flex;justify-content:space-between;align-items:baseline;gap:8px;
-  }
-  .repo-card h3{
-    font-family:'JetBrains Mono',monospace;
-    font-size:0.92rem;
-    font-weight:500;
-    overflow-wrap:anywhere;
-  }
-  .repo-card h3 a{color:var(--paper);text-decoration:none;}
-  .repo-card h3 a:hover{color:var(--amber);}
-  .repo-card .lang{
-    font-family:'JetBrains Mono',monospace;
-    font-size:0.72rem;
-    color:var(--amber);
-    white-space:nowrap;
-  }
-  .repo-card p{font-size:0.85rem;color:var(--slate);margin:0;max-width:none;}
-  .repo-card .fork-tag{
-    font-family:'JetBrains Mono',monospace;
-    font-size:0.7rem;
-    color:var(--slate);
-    border:1px solid var(--line);
-    border-radius:3px;
-    padding:2px 6px;
-    display:inline-block;
-    width:fit-content;
-  }
-
-  footer{padding:56px 0 80px;border-top:1px solid var(--line);}
-  footer p{color:var(--slate);font-size:0.9rem;}
-  footer a{color:var(--paper);}
-  @media (prefers-reduced-motion: no-preference){
-    header.hero{animation:fade 0.6s ease-out;}
-  }
-  @keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+:root{
+  --bg:#000;--fg:#fff;--dim:rgba(255,255,255,.62);--faint:rgba(255,255,255,.4);--line:rgba(255,255,255,.16);--soft:rgba(255,255,255,.06);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{height:auto;scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);background:#000;color-scheme:dark}
+body{background:#000;color:#fff;font-family:'Manrope',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.hero{padding:clamp(72px,14vw,150px) 0 72px}
+h1{font-weight:800;font-size:clamp(2.6rem,9.5vw,6.6rem);line-height:.98;letter-spacing:-.04em}
+h1 span{display:block;color:var(--faint)}
+.lead{margin-top:32px;max-width:58ch;font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--dim);font-weight:300}
+.contact{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px}
+.contact a{border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:.92rem;text-decoration:none;transition:background .2s,color .2s}
+.contact a:hover{background:#fff;color:#000}
+section{display:grid;grid-template-columns:200px 1fr;gap:24px 40px;padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:1rem;font-weight:700;letter-spacing:-.01em;position:sticky;top:calc(env(safe-area-inset-top,0px) + 24px);align-self:start}
+@media(max-width:760px){section{grid-template-columns:1fr}h2{position:static}}
+p{color:var(--dim);max-width:68ch}
+p+p{margin-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span,.chips a{border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:.88rem;text-decoration:none}
+.chips a:hover{border-color:#fff}
+.grp{margin-top:28px}
+.grp h3{font-size:.85rem;font-weight:500;color:var(--faint);margin-bottom:10px}
+.job{padding-bottom:36px}
+.job+.job{padding-top:36px;border-top:1px solid var(--line)}
+.job:last-child{padding-bottom:0}
+.jh{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 24px}
+.jh b{font-size:1.2rem;font-weight:700;letter-spacing:-.02em}
+.jh small{color:var(--faint);font-size:.88rem}
+.org{color:var(--dim);margin-top:2px}
+.job ul{margin-top:16px;padding-left:18px;color:var(--dim)}
+.job li{margin-bottom:8px;max-width:68ch}
+.job li::marker{color:var(--faint)}
+.ach{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.ach div{background:var(--soft);border-radius:14px;padding:22px}
+.ach b{display:block;margin-bottom:6px;font-size:1.02rem}
+.ach p{font-size:.95rem}
+.repos{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px}
+.repo{border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;min-width:0;transition:border-color .2s,background .2s}
+.repo:hover{border-color:#fff;background:var(--soft)}
+.repo h3{font-size:.95rem;font-weight:700;overflow-wrap:anywhere}
+.repo h3 a{text-decoration:none}
+.repo p{font-size:.85rem;color:var(--dim)}
+.tags{margin-top:auto;display:flex;gap:6px;flex-wrap:wrap;font-size:.75rem;color:var(--faint)}
+.tags i{font-style:normal;border:1px solid var(--line);border-radius:4px;padding:1px 7px}
+.row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2px 20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.row:first-child{padding-top:0}
+.row a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--faint)}
+.row a:hover{text-decoration-color:#fff}
+.row em{font-style:normal;color:var(--faint);font-size:.88rem}
+.edu{margin-bottom:28px}
+footer{border-top:1px solid var(--line);padding:56px 0 88px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;color:var(--dim);font-size:.92rem}
+footer a{text-underline-offset:3px}
+@media(prefers-reduced-motion:no-preference){.hero{animation:in .9s cubic-bezier(.2,.7,.2,1)}}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-
 <div class="wrap">
-  <header class="hero">
-    <h1>João Gabriel Medeiros Caldas</h1>
-    <p class="role">Desenvolvedor de Software construindo plataformas com Python, JavaScript, TypeScript, React, Node.js, NestJS e Java, com integrações de IA e uma mentalidade criativa e de dono do produto.</p>
-    <div class="links">
-      <a href="mailto:jgmc@cin.ufpe.br">jgmc@cin.ufpe.br</a>
-      <a href="tel:+5581994813230">+55 81 99481-3230</a>
-      <a href="https://www.linkedin.com/in/joão-gabriel-medeiros-caldas" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Jgmc2025" target="_blank">GitHub</a>
-    </div>
-  </header>
 
-  <section id="sobre">
-    <h2>sobre</h2>
-    <p>Desenvolvedor de software apaixonado por criar novas ideias e simplificar a vida das pessoas por meio da tecnologia. Tenho experiência prática na construção de plataformas web escaláveis, com foco em arquitetura de software adaptável, design de APIs e deploy baseado em Docker, além de integrações com IA.</p>
+<header class="hero">
+  <h1>João Gabriel <span>Medeiros Caldas</span></h1>
+  <p class="lead">Desenvolvedor de Software construindo plataformas web escaláveis com Python, JavaScript, TypeScript, React, Node.js, NestJS, Java e Go, com integrações de IA e mentalidade de dono do produto.</p>
+  <nav class="contact">
+    <a href="mailto:jgmc@cin.ufpe.br">jgmc@cin.ufpe.br</a>
+    <a href="tel:+5581994813230">+55 81 99481-3230</a>
+    <a href="https://www.linkedin.com/in/joão-gabriel-medeiros-caldas" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/Jgmc2025" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://Jgmc2025.github.io" target="_blank" rel="noopener">Portfólio</a>
+  </nav>
+</header>
+
+<section id="sobre">
+  <h2>Sobre</h2>
+  <div>
+    <p>Desenvolvedor de software com sólida experiência em front-end e back-end, apaixonado por criar novas ideias e simplificar a vida das pessoas por meio da tecnologia. Construo plataformas web escaláveis com foco em arquitetura de software adaptável, design de APIs, deploy baseado em Docker e processos ágeis com SCRUM, além de integrações com IA.</p>
     <p>Curso Sistemas de Informação no Centro de Informática da UFPE, onde fui monitor de Introdução à Programação. Concluí o bootcamp de Desenvolvimento Front-End do Inter, com mais de 30 certificados ao longo do curso. Encaro cada desafio como se estivesse gerindo o negócio, sempre em busca de novas ideias.</p>
+    <div class="grp"><h3>Linguagens</h3><div class="chips"><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Java</span><span>Go (Golang)</span></div></div>
+    <div class="grp"><h3>Tecnologias e ferramentas</h3><div class="chips"><span>React</span><span>Node.js</span><span>NestJS</span><span>Docker</span><span>Git</span><span>GitLab</span><span>HTML5</span><span>CSS3</span></div></div>
+    <div class="grp"><h3>Competências</h3><div class="chips"><span>Desenvolvimento Full-Stack</span><span>Arquitetura e Design de APIs</span><span>SCRUM (Sprints, Plannings e Reviews)</span><span>Integração com IA</span><span>Criatividade e dedicação na resolução de problemas</span></div></div>
+  </div>
+</section>
 
-    <div class="sub">// linguagens</div>
-    <div class="stack">
-      <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Java</span>
-    </div>
-    <div class="sub">// tecnologias &amp; ferramentas</div>
-    <div class="stack">
-      <span>React</span><span>Node.js</span><span>NestJS</span><span>Docker</span>
-      <span>Git</span><span>GitLab</span><span>HTML5</span><span>CSS3</span>
-    </div>
-    <div class="sub">// competências</div>
-    <div class="stack">
-      <span>Desenvolvimento Full-Stack</span>
-      <span>Arquitetura e Design de APIs</span>
-      <span>SCRUM (Sprints, Plannings e Reviews)</span>
-      <span>Integração com IA</span>
-      <span>Criatividade e dedicação na resolução de problemas</span>
-    </div>
-  </section>
-
-  <section id="experiencia">
-    <h2>experiência</h2>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Full Stack Engineer — Berzerk Club (Creatorsfy)</span>
-        <span class="entry-meta">12/2025 – 07/2026 · Recife, PE</span>
-      </div>
+<section id="experiencia">
+  <h2>Experiência</h2>
+  <div>
+    <div class="job">
+      <div class="jh"><b>Full Stack Engineer</b><small>12/2025 – 07/2026 · Brasil</small></div>
+      <div class="org">Berzerk Club (Creatorsfy)</div>
       <ul>
-        <li>Desenvolvimento full-stack na Creatorsfy, projeto da Berzerk Club que conecta marcas a influenciadores para escalar o marketing de produtos, simplificando a gestão e a contratação de campanhas.</li>
-        <li>Arquitetura de APIs e integração entre back-end e front-end, convertendo requisitos de stakeholders em sistemas escaláveis.</li>
+        <li>Desenvolvimento full-stack na Creatorsfy, projeto patrocinado pela Berzerk Club que conecta marcas a influenciadores para a divulgação de produtos.</li>
+        <li>Foco em arquitetura e integração de APIs, convertendo requisitos de stakeholders em sistemas escaláveis.</li>
         <li>Uso de NestJS e TypeScript para garantir comunicação segura entre back-end e front-end, com containerização em Docker.</li>
-        <li>Metodologia ágil SCRUM, participando de sprints, sprint plannings e sprint reviews.</li>
+        <li>Metodologia ágil SCRUM, com participação em sprints, sprint plannings e sprint reviews.</li>
         <li>Versionamento de código com Git e armazenamento e gestão dos projetos no GitLab.</li>
       </ul>
     </div>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Monitor de Introdução à Programação — Centro de Informática, UFPE</span>
-        <span class="entry-meta">09/2025 – 07/2026 · Recife, PE</span>
-      </div>
+    <div class="job">
+      <div class="jh"><b>Monitor de Introdução à Programação</b><small>09/2025 – 07/2026 · Brasil</small></div>
+      <div class="org">Centro de Informática, UFPE</div>
       <ul>
-        <li>Mentoria de mais de 50 estudantes no desenvolvimento de raciocínio lógico e na resolução de problemas com Python.</li>
-        <li>Sessões de apoio individuais e em grupo que tornaram conceitos fundamentais mais acessíveis.</li>
+        <li>Uso de Python para explicar e demonstrar conceitos fundamentais de programação.</li>
+        <li>Mentoria de mais de 50 estudantes no desenvolvimento de raciocínio lógico e na resolução de problemas.</li>
+        <li>Sessões de apoio individuais e em grupo que tornaram tópicos complexos mais acessíveis.</li>
       </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="conquistas">
-    <h2>conquistas</h2>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">API Efficiency Boost</span>
-      </div>
-      <p>Aumento da eficiência de APIs por meio de técnicas de otimização e refatoração de código.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Programming Mentorship Impact</span>
-      </div>
-      <p>Auxiliei mais de 50 estudantes a aprimorarem habilidades de programação e resolução de problemas com Python.</p>
-    </div>
-  </section>
+<section id="conquistas">
+  <h2>Conquistas</h2>
+  <div class="ach">
+    <div><b>API Efficiency Boost</b><p>Aumento da eficiência de APIs por meio de técnicas de otimização e refatoração de código.</p></div>
+    <div><b>Programming Mentorship Impact</b><p>Mais de 50 estudantes auxiliados no aprimoramento de habilidades de programação e resolução de problemas com Python.</p></div>
+  </div>
+</section>
 
-  <section id="todos-repositorios">
-    <h2>todos os repositórios públicos</h2>
-    <div class="repo-grid">
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/budgeting-ai" target="_blank">budgeting-ai</a></h3><span class="lang">Java</span></div>
-        <p>API de orçamento pessoal em Java com Spring Boot e Spring AI que entende comandos de voz.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/academia-portais" target="_blank">academia-portais</a></h3><span class="lang">Java</span></div>
-        <p>Academia dos Portais: projeto em Java puro que aplica Design Patterns a um verificador de portais numerados.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/guia-tech-assistente" target="_blank">guia-tech-assistente</a></h3><span class="lang">Python</span></div>
-        <p>Assistente virtual com IA que orienta iniciantes a escolher uma trilha de estudos em tecnologia.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/deteccao-fraude-cartao-credito" target="_blank">deteccao-fraude-cartao-credito</a></h3><span class="lang">Jupyter Notebook</span></div>
-        <p>Detecção de fraude em cartão de crédito com ML: dados desbalanceados, recall/F1, ajuste de limiar e SHAP.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/miniguia-ia-generativa-notebooklm" target="_blank">miniguia-ia-generativa-notebooklm</a></h3><span class="lang">Python</span></div>
-        <p>Miniguia de estudos sobre IA Generativa criado com NotebookLM: curadoria de fontes, prompts testados e dados reais aplicados a um projeto Python (Bootcamp Accenture).</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/api-dioshopping" target="_blank">api-dioshopping</a></h3><span class="lang">TypeScript</span></div>
-        <p>Backend criado durante o Labs na DIO com Node e TypeScript.</p>
-        <span class="fork-tag">fork</span>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/dioshopping" target="_blank">dioshopping</a></h3><span class="lang">JavaScript</span></div>
-        <p>E-commerce desenvolvido na live da DIO.</p>
-        <span class="fork-tag">fork</span>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/newflix" target="_blank">newflix</a></h3><span class="lang">HTML</span></div>
-        <p>Projeto web inspirado na Netflix com HTML5, CSS3 e JavaScript.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/banco" target="_blank">banco</a></h3></div>
-        <p>Teste de transferência e empréstimo bancário.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/java1" target="_blank">java1</a></h3><span class="lang">Java</span></div>
-        <p>Teste de API de banco.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/avanade" target="_blank">avanade</a></h3><span class="lang">HTML</span></div>
-        <p>Cadastro e gerenciamento de tarefas com Angular, ASP.NET Core Web API e SQL Server.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/hub" target="_blank">hub</a></h3><span class="lang">JavaScript</span></div>
-        <p>Hub inteligente de recursos educacionais (FastAPI + React) com integração da API do Gemini.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/vlab" target="_blank">vlab</a></h3><span class="lang">Python</span></div>
-        <p>Projeto em Python.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/teste-nestjs" target="_blank">teste-nestjs</a></h3><span class="lang">TypeScript</span></div>
-        <p>Testes com NestJS e TypeScript.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/Projeto_de_IP" target="_blank">Projeto_de_IP</a></h3><span class="lang">Python</span></div>
-        <p>Trabalho de Introdução à Programação.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/Projeto-DS" target="_blank">Projeto-DS</a></h3><span class="lang">JavaScript</span></div>
-        <p>Projeto em JavaScript.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/dio-desafio-github-primeiro-repositorio" target="_blank">dio-desafio-github-primeiro-repositorio</a></h3></div>
-        <p>Desafio de projeto da DIO sobre Git e GitHub.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/netflix-clone" target="_blank">netflix-clone</a></h3><span class="lang">HTML</span></div>
-        <p>Clone da Netflix construído no curso da Digital Innovation One.</p>
-        <span class="fork-tag">fork</span>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/Jgmc2025" target="_blank">Jgmc2025</a></h3></div>
-        <p>README do perfil do GitHub.</p>
-      </div>
-      <div class="repo-card">
-        <div class="repo-card-head"><h3><a href="https://github.com/Jgmc2025/Jgmc2025.github.io" target="_blank">Jgmc2025.github.io</a></h3><span class="lang">HTML</span></div>
-        <p>Código-fonte deste portfólio.</p>
-      </div>
-    </div>
-  </section>
+<section id="projetos">
+  <h2>Projetos</h2>
+  <div class="repos" id="repos"></div>
+</section>
 
-  <section id="formacao">
-    <h2>formação &amp; certificados</h2>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">B.S. in Information Systems — Centro de Informática, UFPE</span>
-        <span class="entry-meta">05/2025 – 12/2028 (previsão)</span>
-      </div>
-    </div>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">B.S. in Telecommunications Engineering — UFPE</span>
-        <span class="entry-meta">04/2023 – 04/2024</span>
-      </div>
-    </div>
-    <div class="stack">
-      <span>Java AI Copilot — CI&amp;T · out/2026</span>
-      <span>Python para Análise e Automação de Dados — Accenture · set/2026</span>
-      <span>Inter Frontend Developer — Banco Inter (bootcamp, 99h) · set/2026</span>
-      <span>Oracle Java Foundations: Training and Assessment — Oracle · set/2026</span>
-      <span>API RESTful com SpringBoot — Udemy (6h) · set/2026</span>
-      <a href="https://ude.my/UC-a83f5472-7429-4a25-8d24-8393a0d72fba" target="_blank" rel="noopener">Programação em Java do Básico ao Avançado — Udemy (35h) · ago/2026</a>
-      <a href="https://www.skills.google/public_profiles/74505564-e8c2-4e9c-abee-c1b92f426d6a/badges/23908111?locale=pt_BR" target="_blank" rel="noopener">Generative AI — Google · abr/2026</a>
-      <a href="https://credentials.databricks.com/2c9ad369-1233-4e7e-b958-83d8442563cc" target="_blank" rel="noopener">Generative AI — Databricks · abr/2026</a>
-      <a href="https://courses.cognitiveclass.ai/certificates/541bae0a9d724e49a46fb7690d6c685f" target="_blank" rel="noopener">Python for Data Science — IBM · abr/2026</a>
-      <span>Conhecimentos Bancários — Banco do Brasil / Estratégia Concursos (63h) · mar/2025</span>
-    </div>
-  </section>
+<section id="formacao">
+  <h2>Formação</h2>
+  <div>
+    <div class="job edu" style="padding:0 0 24px"><div class="jh"><b>B.S. in Information Systems</b><small>05/2025 – 12/2028 (previsão) · Recife</small></div><div class="org">Universidade Federal de Pernambuco, Centro de Informática</div></div>
+    <div class="job edu" style="padding:24px 0 0"><div class="jh"><b>B.S. in Telecommunications Engineering</b><small>04/2023 – 04/2024 · Recife</small></div><div class="org">Universidade Federal de Pernambuco</div></div>
+  </div>
+</section>
 
-  <section id="idiomas">
-    <h2>idiomas</h2>
-    <div class="stack">
-      <span>Inglês — Avançado</span>
-      <span>Português — Nativo</span>
-    </div>
-  </section>
+<section id="certificados">
+  <h2>Certificações</h2>
+  <div id="certs"></div>
+</section>
 
-  <footer>
-    <p>jgmc@cin.ufpe.br · +55 81 99481-3230 · Recife, PE, Brasil</p>
-    <p><a href="https://www.linkedin.com/in/joão-gabriel-medeiros-caldas" target="_blank">LinkedIn</a> · <a href="https://github.com/Jgmc2025" target="_blank">GitHub</a></p>
-  </footer>
+<section id="idiomas">
+  <h2>Idiomas</h2>
+  <div class="chips"><span>Inglês: Avançado</span><span>Português: Nativo</span></div>
+</section>
+
+<footer>
+  <span>jgmc@cin.ufpe.br &nbsp;|&nbsp; +55 81 99481-3230 &nbsp;|&nbsp; Recife, PE, Brasil</span>
+  <span><a href="https://www.linkedin.com/in/joão-gabriel-medeiros-caldas" target="_blank" rel="noopener">LinkedIn</a> &nbsp;|&nbsp; <a href="https://github.com/Jgmc2025" target="_blank" rel="noopener">GitHub</a></span>
+</footer>
 </div>
 
+<script>
+const R=[
+["budgeting-ai","Java","API de orçamento pessoal em Java com Spring Boot e Spring AI que entende comandos de voz."],
+["academia-portais","Java","Academia dos Portais: projeto em Java puro que aplica Design Patterns a um verificador de portais numerados."],
+["guia-tech-assistente","Python","Assistente virtual com IA que orienta iniciantes a escolher uma trilha de estudos em tecnologia."],
+["deteccao-fraude-cartao-credito","Jupyter","Detecção de fraude em cartão de crédito com ML: dados desbalanceados, recall/F1, ajuste de limiar e SHAP."],
+["miniguia-ia-generativa-notebooklm","Python","Miniguia de estudos sobre IA Generativa criado com NotebookLM (Bootcamp Accenture)."],
+["hub","JavaScript","Hub inteligente de recursos educacionais (FastAPI + React) com API do Gemini para categorizar materiais didáticos."],
+["avanade","HTML","Cadastro e gerenciamento de tarefas com Angular, ASP.NET Core Web API e SQL Server."],
+["api-dioshopping","TypeScript","Backend criado durante o Labs na DIO com Node e TypeScript.","fork"],
+["dioshopping","JavaScript","E-commerce desenvolvido na live da DIO.","fork"],
+["newflix","HTML","Clone inspirado na Netflix, construído com HTML5, CSS3 e JavaScript."],
+["netflix-clone","HTML","Clone da Netflix construído no curso da Digital Innovation One.","fork"],
+["dio-desafio-github-primeiro-repositorio","","Desafio de projeto da DIO sobre Git e GitHub."],
+["banco","","Teste de transferência e empréstimo bancário."],
+["java1","Java","API de testes de operações bancárias, desenvolvida em Java."],
+["teste-nestjs","TypeScript","Projeto de testes em TypeScript com NestJS."],
+["Projeto_de_IP","Python","Trabalho de Introdução à Programação em Python."],
+["vlab","Python","Projeto em Python."],
+["Projeto-DS","JavaScript","Projeto em JavaScript."],
+["Jgmc2025","","README do perfil do GitHub."],
+["Jgmc2025.github.io","HTML","Código-fonte deste portfólio."]
+];
+document.getElementById('repos').innerHTML=R.map(([n,l,d,f])=>`<article class="repo"><h3><a href="https://github.com/Jgmc2025/${n}" target="_blank" rel="noopener">${n}</a></h3><p>${d}</p><div class="tags">${l?`<i>${l}</i>`:''}${f?'<i>fork</i>':''}</div></article>`).join('');
+
+const C=[
+["Go (Golang) Fundamentals: Simple, Fast Programs for Beginners","Cursa","out/2026"],
+["Learn Golang","Cursa","out/2026"],
+["GO Lang full course for beginners","Cursa","out/2026"],
+["Java AI Copilot","CI&T","out/2026"],
+["Python para Análise e Automação de Dados","Accenture","set/2026"],
+["Inter Frontend Developer (bootcamp, 99h)","Banco Inter","set/2026"],
+["Oracle Java Foundations: Training and Assessment","Oracle","set/2026"],
+["API RESTful com SpringBoot (6h)","Udemy","set/2026"],
+["Programação em Java do Básico ao Avançado (35h)","Udemy","ago/2026","https://ude.my/UC-a83f5472-7429-4a25-8d24-8393a0d72fba"],
+["Generative AI","Google","abr/2026","https://www.skills.google/public_profiles/74505564-e8c2-4e9c-abee-c1b92f426d6a/badges/23908111?locale=pt_BR"],
+["Generative AI","Databricks","abr/2026","https://credentials.databricks.com/2c9ad369-1233-4e7e-b958-83d8442563cc"],
+["Python for Data Science","IBM","abr/2026","https://courses.cognitiveclass.ai/certificates/541bae0a9d724e49a46fb7690d6c685f"],
+["Conhecimentos Bancários (63h)","Banco do Brasil / Estratégia Concursos","mar/2025"]
+];
+document.getElementById('certs').innerHTML=C.map(([t,o,d,u])=>`<div class="row"><span>${u?`<a href="${u}" target="_blank" rel="noopener">${t}</a>`:t}<br><em>${o}</em></span><em>${d}</em></div>`).join('');
+</script>
 </body>
 </html>
